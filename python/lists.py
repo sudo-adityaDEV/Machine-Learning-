@@ -18,3 +18,20 @@ num.insert(1,"inserted") # This inserts string "inserted" at index number 1.
 
 print(num)
 
+# .extend() appends multiple elements from another collection
+random.extend(num)
+print(random)
+#.remove removes the first occurence of an element.
+random.remove(1)
+print(random)
+
+
+# .pop() removes and returns the item at a given index ,defaults to last element .
+
+random.pop()
+print(random)
+
+# .clear() clears the whole list.
+# .sort() sorts  (ascending order by default)
+# .reverse() reverses the list in place .
+
