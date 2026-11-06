@@ -60,3 +60,54 @@ a2 = cat("Pussy")
 
 print(a2.name)
 a2.eat()
+
+
+
+
+# Multiple and mutlilevel inheritance . 
+
+class predator(Animal):
+    def hunt(self):
+        print(f"{self.name} is hunting")
+
+
+class prey(Animal):
+    def flee(self):
+        print(f"{self.name} is feeling")
+
+class rabbit(prey): # This is multilevel inheritance , rabbit -> prey -> Animal.
+    pass
+
+class lion(predator):
+    pass
+
+
+# Abstract classes :
+
+from abc import ABC, abstractmethod
+
+class Vehicle (ABC):
+
+    @abstractmethod
+    def engine(self):
+        pass
+    
+    def go(self):
+        print("Car is running.")
+
+
+class Audi(Vehicle):
+    def __init__ (self,name):
+        self.name = name
+
+
+    def engine(self):
+       print(f"{self.name} has a V8 engine.")
+
+
+r8 = Audi("r8");
+
+print(r8.name)
+r8.engine()
+r8.go()
+
